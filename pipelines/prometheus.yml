@@ -1,5 +1,5 @@
-format_version: 10
-pipelines:
+  format_version: 10
+  pipelines:
   prometheus:
     group: Tools1
     materials:
