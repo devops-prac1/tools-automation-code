@@ -4,6 +4,7 @@
     dest: /opt
     remote_src: yes
     owner: bin
+
 - name: copy prometheus service file
   ansible.builtin.template:
     src: prometheus.service
