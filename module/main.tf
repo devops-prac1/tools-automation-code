@@ -12,13 +12,11 @@ resource "aws_instance" "instance" {
     }
   }
 
-
   tags = {
     Name = var.tool_name
 
   }
 }
-
 
 resource "aws_route53_record" "record" {
   name    = var.tool_name
@@ -60,7 +58,7 @@ resource "aws_iam_role" "role" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   =  var.policy_resource_list
+          Action   = concat(var.dummy_policy, var.policy_resource_list)
           Effect   = "Allow"
           Resource = "*"
         },
