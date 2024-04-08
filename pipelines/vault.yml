@@ -16,4 +16,4 @@ pipelines:
           jobs:
             ansible:
               tasks:
-                - exec: {command: ansible-playbook, arguments: [ "-i", "vault-internal.priya9sdr.online,", "tools.yml", "-e", "tool_name=vault", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321" ], run_if: passed}
+                - exec: {command: ansible-playbook, arguments: [ "-i","vault-internal.priya9sdr.online,", "tools.yml", "-e", "tool_name=vault", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321" ], run_if: passed}
