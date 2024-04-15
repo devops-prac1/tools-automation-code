@@ -13,6 +13,12 @@ variable "tools" {
       instance_type        = "t3.small"
       policy_resource_list = []
     }
+    elk = {
+      instance_type        = "r7i.large"
+      policy_resource_list = []
+    }
+
+
   }
 
 }
