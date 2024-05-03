@@ -10,16 +10,12 @@
     name: java-17-openjdk
     state: installed
 
-# we need to create opt directory
-
 - name: Create Sonarqube directory
   ansible.builtin.file:
     path: /opt/sonarqube
     state: directory
     owner: sonar
     group: sonar
-
- # downloaded nad extracted one will get all sonar permissions
 
 - name: Download Sonarqube
   ansible.builtin.unarchive:
@@ -28,14 +24,10 @@
     remote_src: yes
   become_user: sonar
 
-
-
 - name: Setup service file
   ansible.builtin.template:
     src: sonarqube.service
     dest: /etc/systemd/system/sonarqube.service
-
-#
 
 - name: Start Sonarqube
   ansible.builtin.systemd_service:
@@ -43,6 +35,3 @@
     state: started
     enabled: yes
     daemon-reload: yes
-
-
-
