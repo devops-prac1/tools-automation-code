@@ -35,7 +35,7 @@
     src: sonarqube.service
     dest: /etc/systemd/system/sonarqube.service
 
-
+#
 
 - name: Start Sonarqube
   ansible.builtin.systemd_service:
