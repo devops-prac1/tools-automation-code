@@ -17,6 +17,8 @@
     owner: sonar
     group: sonar
 
+# sonarqube we r running as service we have to follow the standard rule we have run as a normal user
+
 - name: Download Sonarqube
   ansible.builtin.unarchive:
     src: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.5.0.89998.zip
